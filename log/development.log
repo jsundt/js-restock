@@ -233,3 +233,172 @@ Started GET "/assets/shopping_lists-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" 
 
 
 Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-03-27 19:46:34 +0000
+
+
+Started GET "/shopping_lists/new" for ::1 at 2015-03-27 19:51:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ShoppingListsController#new as HTML
+  Rendered shopping_lists/_form.html.erb (14.7ms)
+  Rendered shopping_lists/new.html.erb within layouts/application (18.0ms)
+  Rendered shared/_svgicons.html.erb (0.6ms)
+Completed 200 OK in 117ms (Views: 105.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/shopping_lists" for ::1 at 2015-03-27 19:54:08 +0000
+Processing by ShoppingListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2E+waOifLrO8fv3OPLc5pkQiuYtL9XAawX1tVZ/1M6PbBty/hvK99PrCM+gmw2Er5j4m/EJGa6/AouxsnAiwOQ==", "shopping_list"=>{"title"=>"test", "description"=>"test"}, "commit"=>"Create Shopping list"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "shopping_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test"], ["description", "test"], ["created_at", "2015-03-27 19:54:08.185807"], ["updated_at", "2015-03-27 19:54:08.185807"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/shopping_lists/2
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/shopping_lists/2" for ::1 at 2015-03-27 19:54:08 +0000
+Processing by ShoppingListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShoppingList Load (0.2ms)[0m  [1mSELECT  "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered shopping_lists/show.html.erb within layouts/application (0.7ms)
+  Rendered shared/_svgicons.html.erb (0.6ms)
+Completed 200 OK in 53ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides-ae2ba741195fd08c3c01457e3dea0b83.css?body=1" for ::1 at 2015-03-27 19:54:08 +0000
+
+
+Started GET "/assets/application-ec371c31ed8c145468a68b2dd2481408.css?body=1" for ::1 at 2015-03-27 19:54:08 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-27 19:54:08 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-27 19:54:08 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-27 19:54:08 +0000
+
+
+Started GET "/assets/shopping_lists-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-27 19:54:08 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-03-27 19:54:08 +0000
+
+
+Started GET "/shopping_lists" for ::1 at 2015-03-27 19:59:19 +0000
+Processing by ShoppingListsController#index as HTML
+  [1m[35mShoppingList Load (0.2ms)[0m  SELECT "shopping_lists".* FROM "shopping_lists"
+  Rendered shopping_lists/index.html.erb within layouts/application (4.3ms)
+  Rendered shared/_svgicons.html.erb (0.1ms)
+Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/shopping_lists/2" for ::1 at 2015-03-27 19:59:21 +0000
+Processing by ShoppingListsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Dygz2p+10+M9MDwxrVpc5ugtK21GREbOYOwRuIcr2OsMYV8N8dhApHuM8he3LgRrSjG0Gk/3XXthM5CBhNZbcQ==", "id"=>"2"}
+  [1m[36mShoppingList Load (0.4ms)[0m  [1mSELECT  "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "shopping_lists" WHERE "shopping_lists"."id" = ?[0m  [["id", 2]]
+  [1m[35m (8.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/shopping_lists
+Completed 302 Found in 17ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/shopping_lists" for ::1 at 2015-03-27 19:59:21 +0000
+Processing by ShoppingListsController#index as HTML
+  [1m[36mShoppingList Load (0.6ms)[0m  [1mSELECT "shopping_lists".* FROM "shopping_lists"[0m
+  Rendered shopping_lists/index.html.erb within layouts/application (3.1ms)
+  Rendered shared/_svgicons.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides-ae2ba741195fd08c3c01457e3dea0b83.css?body=1" for ::1 at 2015-03-27 19:59:21 +0000
+
+
+Started GET "/assets/application-ec371c31ed8c145468a68b2dd2481408.css?body=1" for ::1 at 2015-03-27 19:59:21 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-27 19:59:22 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-27 19:59:22 +0000
+
+
+Started GET "/assets/shopping_lists-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-27 19:59:22 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-03-27 19:59:22 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-27 19:59:22 +0000
+
+
+Started GET "/shopping_lists/new" for ::1 at 2015-03-27 19:59:23 +0000
+Processing by ShoppingListsController#new as HTML
+  Rendered shopping_lists/_form.html.erb (3.2ms)
+  Rendered shopping_lists/new.html.erb within layouts/application (4.2ms)
+  Rendered shared/_svgicons.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shopping_lists" for ::1 at 2015-03-27 19:59:24 +0000
+Processing by ShoppingListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ik7pbSozzOwKqP+wlt5E8yP9/y2lrhHAVtmkKw09T+OJB4W6RF5fq0wUMZaMqhx+geFgWqwdCnVXBiUSDsDMeQ==", "shopping_list"=>{"title"=>"", "description"=>"test"}, "commit"=>"Create Shopping list"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered shopping_lists/_form.html.erb (5.8ms)
+  Rendered shopping_lists/new.html.erb within layouts/application (7.2ms)
+  Rendered shared/_svgicons.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application-ec371c31ed8c145468a68b2dd2481408.css?body=1" for ::1 at 2015-03-27 19:59:24 +0000
+
+
+Started GET "/assets/bootstrap_and_overrides-ae2ba741195fd08c3c01457e3dea0b83.css?body=1" for ::1 at 2015-03-27 19:59:24 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-27 19:59:24 +0000
+
+
+Started GET "/assets/shopping_lists-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-27 19:59:24 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-03-27 19:59:24 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-27 19:59:24 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-27 19:59:24 +0000
+
+
+Started POST "/shopping_lists" for ::1 at 2015-03-27 20:00:19 +0000
+Processing by ShoppingListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UufnAVUo7AWZof186iisiXURxFso1zqECYNa5tiq1QFRrovWO0V/Qt8dM1rwXPQE1w1bLCFkITEIXNvf21dWmw==", "shopping_list"=>{"title"=>"", "description"=>"test"}, "commit"=>"Create Shopping list"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered shopping_lists/_form.html.erb (2.9ms)
+  Rendered shopping_lists/new.html.erb within layouts/application (4.8ms)
+  Rendered shared/_svgicons.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides-ae2ba741195fd08c3c01457e3dea0b83.css?body=1" for ::1 at 2015-03-27 20:00:19 +0000
+
+
+Started GET "/assets/application-ec371c31ed8c145468a68b2dd2481408.css?body=1" for ::1 at 2015-03-27 20:00:19 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-27 20:00:19 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-27 20:00:19 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-27 20:00:19 +0000
+
+
+Started GET "/assets/shopping_lists-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-27 20:00:19 +0000
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for ::1 at 2015-03-27 20:00:19 +0000
