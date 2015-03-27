@@ -16,9 +16,12 @@
       <tr id="<%= dom_id(shopping_list) %>">
         <td><%= shopping_list.title %></td>
         <td><%= shopping_list.description %></td>
-        <td><%= link_to 'Show', shopping_list %></td>
-        <td><%= link_to 'Edit', edit_shopping_list_path(shopping_list) %></td>
-        <td><%= link_to 'Destroy', shopping_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'List Items', shopping_list_shopping_items_path(shopping_list) %>
+          <%= link_to 'Show', shopping_list %>
+          <%= link_to 'Edit', edit_shopping_list_path(shopping_list) %>
+          <%= link_to 'Destroy', shopping_list, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
