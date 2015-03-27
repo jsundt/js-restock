@@ -16,3 +16,7 @@
 /tmp
 public/uploads/*
 log/development.log
+
+*.sqlite3
+
+*.pid
