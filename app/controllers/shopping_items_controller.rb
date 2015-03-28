@@ -47,6 +47,14 @@ class ShoppingItemsController < ApplicationController
     redirect_to shopping_list_shopping_items_path
   end
 
+  def complete
+    @shopping_item = @shopping_list.shopping_items.find(params[:id])
+    @shopping_item.update_attribute(:completed_at, Time.now)
+    redirect_to shopping_list_shopping_items_path, notice: "Item Marked as complete."
+  end
+
+
+
 
   def url_options
     { shopping_list_id: params[:shopping_list_id] }.merge(super)
