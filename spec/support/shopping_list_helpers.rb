@@ -1,7 +1,7 @@
 module ShoppingListHelpers
   def visit_list(list)
     visit "/shopping_lists"
-    within "#shopping_list_#{list.id}" do
+    within dom_id_for(list) do
       click_link "List Items"
     end
   end
