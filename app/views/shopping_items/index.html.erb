@@ -1,2 +1,8 @@
-<h1>ShoppingItems#index</h1>
+<h1><%= @shopping_list.title %></h1>
 <p>Find me in app/views/shopping_items/index.html.erb</p>
+
+<ul class="shopping_items">
+  <% @shopping_list.shopping_items.each do |todo_item| %>
+    <li><%= todo_item.content %></li>
+  <% end %>
+</ul>
