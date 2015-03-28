@@ -1,15 +1,17 @@
-<h1><%= @shopping_list.title %></h1>
+<h1 class="title"><%= @shopping_list.title %></h1>
 
 
-<ul class="shopping_items">
+<table class="shopping_items">
   <% @shopping_list.shopping_items.each do |todo_item| %>
-    <li id="<%= dom_id(todo_item) %>">
-      <%= todo_item.content %>
-      <%= link_to "Edit", edit_shopping_list_shopping_item_path(todo_item) %>
-      <%= link_to "Delete", shopping_list_shopping_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?"} %>
-    </li>
+    <tr id="<%= dom_id(todo_item) %>">
+      <td><%= todo_item.content %></td>
+      <td class="item__content">
+        <%= link_to "Edit", edit_shopping_list_shopping_item_path(todo_item) %>
+        <%= link_to "Delete", shopping_list_shopping_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?"} %>
+      </td>
+    </tr>
   <% end %>
-</ul>
+</table>
 
 
 <p>

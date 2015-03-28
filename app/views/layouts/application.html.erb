@@ -15,6 +15,13 @@
 <body>
   <%= render 'shared/svgicons' %>
 
+  <nav class="main-menu">
+    <h1><%= link_to "home", root_path %></h1>
+    <ul>
+      <li><%= link_to "Lists", shopping_lists_path %></li>
+    </ul>
+  </nav>
+
   <% flash.each do |type, message|  %>
     <div class="alert flash <%= type %>">
       <%= message %>

@@ -10,7 +10,7 @@ describe "Create todo items" do
     click_button "Save"
 
     expect(page).to have_content("Added List Item.")
-    within("ul.shopping_items") do
+    within(".shopping_items") do
       expect(page).to have_content("Milk")
     end
   end
