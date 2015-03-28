@@ -3,7 +3,10 @@
 
 <ul class="shopping_items">
   <% @shopping_list.shopping_items.each do |todo_item| %>
-    <li><%= todo_item.content %></li>
+    <li id="<%= dom_id(todo_item) %>">
+      <%= todo_item.content %>
+      <%= link_to "Edit", edit_shopping_list_shopping_item_path(todo_item) %>
+    </li>
   <% end %>
 </ul>
 
