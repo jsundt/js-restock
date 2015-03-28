@@ -1,0 +1,48 @@
+
+
+
+
+/* --------------------------------------- *\
+  #Alerts and notifications
+\* --------------------------------------- */
+
+.alert {
+  @include clearfix;
+  border-left: 3px solid;
+  margin-bottom: $padding;
+  padding: 10px;
+
+  &.error {
+    background: lighten($danger-colour, 35);
+    border-color: $danger-colour;
+    color: darken($danger-colour, 15);
+  }
+
+  &.success {
+    background: lighten($success-colour, 45);
+    border-color: $success-colour;
+    color: darken($success-colour, 10);
+  }
+
+  &.notice {
+    background: lighten($warning-colour, 40);
+    border-color: $warning-colour;
+    color: darken($warning-colour, 10);
+  }
+
+  &.info {
+    background: lighten($info-colour, 48);
+    border-color: $info-colour;
+    color: darken($info-colour, 10);
+  }
+
+  &.empty {
+    background: #f4f4f4;
+    border: 1px dashed $silver;
+    text-align: center;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
