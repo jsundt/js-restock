@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  root 'categories#index'
+
+
+  resources :items do
+    collection do
+      get :change_stock
+    end
+    #get "update_stock/:item_id", to: "items#update_stock"
+  end
+  resources :categories
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
