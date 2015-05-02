@@ -12,11 +12,6 @@
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
+/log/*
+!/log/.keep
 /tmp
-public/uploads/*
-log/development.log
-
-*.sqlite3
-
-*.pid
