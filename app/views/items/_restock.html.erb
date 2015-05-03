@@ -1,0 +1,12 @@
+
+<h3>Stuff I need</h3>
+
+<ul>
+<% @categories.each do |category| %>
+  <% if category.has_missing_items? %>
+      <% category.items.restock.each do |item| %>
+        <li><%= item.title %> – <%= item.icon %> – <%= link_to 'I have this, get it off my list', change_stock_items_path(:id => item), remote: true, class: 'js-restock' %></li>
+      <% end %>
+  <% end %>
+<% end %>
+</ul>

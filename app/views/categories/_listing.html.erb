@@ -1,0 +1,23 @@
+<section class="section section--categories">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center">Categories</h2>
+      </div>
+    </div>
+    <div class="row">
+      
+      <% @categories.each do |category| %>
+  
+      <%= link_to category, class: 'category__link' do %>
+        <svg class="icon category__icon">
+          <use xlink:href="#<%= category.icon %>"></use>
+        </svg>
+        <span class="category__title"><%= category.title %></span>
+      <% end %>
+
+    <% end %>
+
+    </div>
+  </div>
+</section>

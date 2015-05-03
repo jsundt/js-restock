@@ -1,0 +1,26 @@
+<section class="section section--add">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center"><%= @category.title %> stuff</h2>
+      </div>
+    </div>
+    <div class="row">
+      
+      <% @category.items.order('created_at ASC').each do |item| %>
+  
+        <%= link_to change_stock_items_path(:id => item), class: 'js-restock item__link' do %>
+          <svg class="icon item__icon<% if item.stock? %> active<% else %><% end %>">
+            <use xlink:href="#<%= item.icon %>"></use>
+          </svg>
+          <span class="item__title"><%= item.title %></span>
+        <% end %>
+
+      <% end %>
+
+    </div>
+    <div class="row">
+      <%= link_to 'Back to categories', root_path, class: 'btn btn--back' %>   
+    </div>
+  </div>
+</section>

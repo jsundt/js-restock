@@ -1,0 +1,33 @@
+
+
+
+/* --------------------------------------- *\
+  #Main Layout styles
+\* --------------------------------------- */
+
+
+
+
+
+
+/* --------------------------------------- *\
+  #Section styling
+\* --------------------------------------- */
+
+.section {
+  @include clearfix();
+}
+
+.section--categories,
+.section--add {
+  width: 100%;
+  background: $off-white;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.section--categories {
+  padding-bottom: 80px;
+}

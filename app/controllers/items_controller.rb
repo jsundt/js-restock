@@ -54,6 +54,8 @@ class ItemsController < ApplicationController
     else
       @item.update_attributes(:stock => '1')
     end
+
+    redirect_to :back
   end
 
   private

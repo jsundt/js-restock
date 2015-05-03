@@ -10,6 +10,28 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require bootstrap_and_overrides
  *= require_self
  */
+
+// making pretty defaults
+@import "makingpretty-boilerplate/config";
+@import "base/config";
+
+@import "makingpretty-boilerplate/mixins";
+@import "makingpretty-boilerplate/type";
+//@import "base/type";
+
+@import "pages/layout";
+
+// Import reusable modules
+@import "modules/navbar";
+@import "modules/icons";
+@import "modules/buttons";
+
+
+// Specific project & page styles
+
+
+// For anything quick and dirty that needs thrown in
+@import "base/shame";
