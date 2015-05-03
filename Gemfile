@@ -6,6 +6,7 @@ gem 'rails', '4.2.1'
 gem 'rack'
 gem 'pg'
 gem 'therubyracer', platforms: :ruby
+gem 'turbolinks'
 
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
