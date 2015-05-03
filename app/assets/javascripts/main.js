@@ -22,6 +22,32 @@ ready = function() {
     $('#notice').append('oh no ajax error! ')
   });
 
+
+
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    var slideDown = $(".section--bottom")
+
+    if (scroll >= 10) {
+      slideDown.addClass("section--scroll");
+    } else {
+      slideDown.removeClass("section--scroll");
+    }
+  });
+
+
+  // Make inline links scroll instead of jump
+  $(".js-scroll-to").click(function(e) {
+    var offset = $.attr(this, 'href');
+
+    if (offset.indexOf("/") == -1) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $(offset).offset().top
+      }, 120);
+    }
+  }); //END inline links scroll
+
 };
 
 $(document).ready(ready);

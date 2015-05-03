@@ -12,13 +12,15 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 
-  <%= render 'shared/svgicons' %>
 </head>
 <body>
   <%= render 'shared/svgicons' %>
+  <%= render 'icons/svgsprite' %>
   <%= render 'shared/header' %>
 
   <%= yield %>
+
+  <a href="#top" class="btn btn--add js-scroll-to">+</a>
 
   <%= render 'shared/scripts' %>
 </body>

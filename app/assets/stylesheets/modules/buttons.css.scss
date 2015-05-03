@@ -29,3 +29,11 @@
   width: 100%;
   margin: 20px 0 0;
 }
+
+.btn--add {
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  background: $secondary-colour;
+}

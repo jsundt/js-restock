@@ -1,12 +1,24 @@
-
-<h3>Stuff I need</h3>
-
-<ul>
-<% @categories.each do |category| %>
-  <% if category.has_missing_items? %>
-      <% category.items.restock.each do |item| %>
-        <li><%= item.title %> – <%= item.icon %> – <%= link_to 'I have this, get it off my list', change_stock_items_path(:id => item), remote: true, class: 'js-restock' %></li>
+<section class="section--restock">
+  <div class="container">
+    <div class="row">
+      <!-- <h3>Stuff I need</h3> -->
+    </div>
+    <div class="row">
+      <% @categories.each do |category| %>
+        <% if category.has_missing_items? %>
+          <% category.items.restock.each do |item| %>
+            <%= link_to change_stock_items_path(:id => item), class: 'need__link js-restock' do %>
+              <svg class="icon icon--need">
+                <use xlink:href="#<%= item.icon %>"></use>
+              </svg>
+              <div class="need__info">
+                <span class="need__title"><%= item.title %></span>
+                <div class="need_check"></div>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
       <% end %>
-  <% end %>
-<% end %>
-</ul>
+    </div>
+  </div>
+</section>
