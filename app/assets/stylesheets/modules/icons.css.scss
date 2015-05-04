@@ -14,14 +14,6 @@
 
   &:hover {
     text-decoration: none;
-
-    .icon {
-      background: $secondary-colour;
-
-      &.active {
-        background: $success-colour;
-      }
-    }
   }
 
   @include min-width($small-break) {
@@ -38,7 +30,7 @@
     width: 60px;
     height: 60px;
     fill: currentColor;
-    background: $black;
+    background: $white;
     border-radius: 50%;
 
     @include min-width($medium-break) {
@@ -47,6 +39,7 @@
     }
     &.active {
       background: $success-colour;
+      fill: $white;
     }
   }
   .item__icon {
@@ -66,6 +59,13 @@
     &:hover {
       text-decoration: none;
     }
+
+    &.remove {
+      opacity: 0;
+      transform: scale3d(0.8, 0.8, 1);
+
+      transition: opacity 0.2s, transform 0.2s;
+    }
   }
 
   .icon--need {
@@ -73,6 +73,7 @@
     float: left;
     border-radius: 5px;
     background: $success-colour;
+    fill: $white;
 
     @include min-width($medium-break) {
       width: 60px;

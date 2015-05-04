@@ -26,7 +26,7 @@ Item.create( title: 'pasta', icon: 'item__pasta', category_id: '2' )
 Category.create( title: 'Misc', icon: 'cat__misc' )
 Item.create( title: 'Lightbulb', icon: 'item__lightbulb', category_id: '3' )
 Item.create( title: 'Washing Powder', icon: 'item__washingpowder', category_id: '3' )
-Item.create( title: 'Garbadge Bags', icon: 'item__garbagebags', category_id: '3' )
+Item.create( title: 'Garbage Bags', icon: 'item__garbagebag', category_id: '3' )
 Item.create( title: 'Utilities', icon: 'item__utilities', category_id: '3' )
 
 
@@ -51,7 +51,7 @@ Category.create( title: 'Meals', icon: 'cat__meals' )
 Item.create( title: 'Mexican', icon: 'item__mexican', category_id: '6' )
 Item.create( title: 'Steaks', icon: 'item__steak', category_id: '6' )
 Item.create( title: 'Italian', icon: 'item__italian', category_id: '6' )
-Item.create( title: 'Chicken', icon: 'item__chicken', category_id: '6' )
+Item.create( title: 'Lunch', icon: 'item__lunch', category_id: '6' )
 
 
 

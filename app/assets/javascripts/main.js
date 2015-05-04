@@ -13,13 +13,8 @@ ready = function() {
     }
   });
 
-
-  $('.js-restock').on('ajax:success', function(event, xhr, status, error) {
-    $('#notice').append('ajax did stuff! ')
-  });
-
-  $('.js-restock').on('ajax:error', function(event, xhr, status, error) {
-    $('#notice').append('oh no ajax error! ')
+  $('.js-stocked').click(function() {
+    $(this).addClass('remove');
   });
 
 

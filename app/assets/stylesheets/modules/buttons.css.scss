@@ -36,4 +36,12 @@
   position: fixed;
   bottom: 0;
   background: $secondary-colour;
+  font-size: 30px;
+  line-height: 40px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
 }
